@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include "worker.h" 
+#include <readline/readline.h>
+#include <readline/history.h> 
+
+int main() {
+	pthread_t thread[5]; 
+	int i;
+	for (i = 0; i < 5; i++) {
+		printf("before create");
+		pthread_create (&thread[i], NULL, &worker, (void*)i);
+		printf("after create");
+	}
+	for (i = 0; i < 5; i++) {
+		pthread_join(thread[i], NULL);
+	}
+}
