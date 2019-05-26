@@ -5,4 +5,4 @@ A small program, thread_demo, that does the following:
   argument, then returns. 
   The main thread waits  until all threads have completed, then print "work complete." 
 This program uses the POSIX thread interface 
-In order to run the program enter the command "make" followed by 
+In order to run the program enter the command "make" followed by thread_demo to compile it. 
