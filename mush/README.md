@@ -37,4 +37,4 @@ As this shell is truly underachieving, when users connect commands with a
 pipe symbol “|”, the commands are treated as if they were separated by a “;” along
 with a warning “Pipe not implemented”. 
 
-  
+In order to run the program on your terminal, type the command "make" followed by "mush" in order to compile it. 
