@@ -1,0 +1,20 @@
+CXX = g++
+CXXFLAGS = -std=c++11
+OBJ = consumer.o producer.o mizzo.o
+LIBS = -lpthread -lrt
+
+mizzo: $(OBJ)
+  $(CXX) $(CXXFLAGS) -o mizzo $(OBJ) $(LIBS)
+
+consumer.o: consumer.h constants.h
+  $(CXX) $(CXXFLAGS) -c consumer.cpp
+
+producer.o: producer.h constants.h
+  $(CXX) $(CXXFLAGS) -c producer.cpp
+
+mizzo.o: producer.h consumer.h constants.h
+  $(CXX) $(CXXFLAGS) -c mizzo.cpp
+
+clean:
+  rm *.o
+  echo Clean done 
