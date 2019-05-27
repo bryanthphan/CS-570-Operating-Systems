@@ -27,6 +27,7 @@ delay. The class FAQ explains command line argument parsing and how to cause
 a thread to sleep for a given interval (remember from the last assignment that
 using getopt can make parsing much easier). You need not check for errors when
 sleeping.
+
 2. Your program should written using multiple files that have some type of logical
 coherency (e.g. producer, consumer, belt, etc.). Write your Makefile (required
 with all programs) early, this will permit you to not have to worry about which
@@ -34,17 +35,22 @@ files have changed since the last time you compiled. The Makefile should
 generate program mizzo (lower case) and be in directory cs570/a05 on your
 edoras account.
 Roch p. 4
+
 3. Do not use global variables to communicate information to your threads. Pass in
 data structures.
+
 4. Each candy generator should be written as a separate thread. The consumer
 processes (Lucy & Ethel) must share common code but must be executed as
 separate threads. It is also possible to share common code for the producers, but
 not required.
+
 5. One of the elements of the data structure that you pass to your consumer threads
 should be the consumer thread name (Lucy or Ethel), this will allow you to print
 messages indicating whether Lucy or Ethel did the work.
+
 6. Maintain the ordering of the candy production and consumption. Candies are
 removed in first-in first-out order.
+
 7. Your producers should stop production once 100 candies are produced. After all
 100 candies are consumed, the program should exit. Descriptive output should be
 produced each time a candy is added or removed from the conveyer belt. When
